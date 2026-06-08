@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main()
+{
+ int n, fact=1,a;
+
+printf ("Enter number to find factorial: ");
+scanf("%d", &n);
+
+a=n;
+while (n!=0)
+{
+
+fact = fact*n;
+n--;
+}
+printf ("factorial of %d is: %d", a, fact);
+
+return 0;
+
+}
+
