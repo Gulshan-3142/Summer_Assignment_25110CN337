@@ -2,26 +2,18 @@
 
 int main() {
     
-    int n,m,r,sum=0;
+    int n,r,prod=1;
     
     printf("Enter the number: ");
     scanf("%d",&n);
     
-    m=n;
     while(n!=0)
     {
         r = n%10;
-        sum = r + sum*10; 
+        prod = prod*r; 
         n=n/10;
     }
     
-    if(sum==m)
-    {
-    printf("\n%d is a palindrome number",sum);
-    }
-    else
-    {
-     printf("\n%d is not palindrome number",sum);
-    }
+    printf("revers of number: %d",prod);
     return 0; 
 }
