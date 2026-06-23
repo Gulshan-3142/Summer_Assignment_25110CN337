@@ -1,21 +1,27 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
 
-int main()
-{
-    int a,b,remandar=0;
-
-    printf("Enter number: ");
-    scanf("%d %d",&a,&b);
-
-    while(b!=0)
+int main() {
+    
+    int n,m,r,sum=0;
+    
+    printf("Enter the number: ");
+    scanf("%d",&n);
+    
+    m=n;
+    while(n!=0)
     {
-        remandar = a%b;
-        a = b;
-        b = remandar;
+        r = n%10;
+        sum = r + sum*10; 
+        n=n/10;
     }
-
-    printf("GCD:  %d",a);
-
-    return 0;
+    
+    if(sum==m)
+    {
+    printf("\n%d is a palindrome number",sum);
+    }
+    else
+    {
+     printf("\n%d is not palindrome number",sum);
+    }
+    return 0; 
 }
