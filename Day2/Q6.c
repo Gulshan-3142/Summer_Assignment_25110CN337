@@ -14,6 +14,6 @@ int main() {
         n=n/10;
     }
     
-    printf("revers of number: %d",prod);
+    printf("product of digit: %d",prod);
     return 0; 
 }
