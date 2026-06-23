@@ -2,7 +2,7 @@
 
 int main() {
     
-    int n,r,prod=1;
+    int n,r,sum=0;
     
     printf("Enter the number: ");
     scanf("%d",&n);
@@ -10,10 +10,10 @@ int main() {
     while(n!=0)
     {
         r = n%10;
-        prod = prod*r; 
+        sum = r + sum*10; 
         n=n/10;
     }
     
-    printf("product of digit: %d",prod);
+    printf("number of digit: %d",sum);
     return 0; 
 }
