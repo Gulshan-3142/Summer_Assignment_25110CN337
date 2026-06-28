@@ -6,6 +6,12 @@ int main()
     printf("Enter size of array: ");
     scanf("%d", &n);
 
+    if (n <= 0)
+    {
+        printf("Array is empty.");
+        return 0;
+    }
+
     int arr[n], i;
     printf("Enter value: ");
     for (i = 0; i < n; i++)
