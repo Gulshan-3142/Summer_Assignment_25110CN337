@@ -22,7 +22,7 @@ int main()
 
     for (i = 0; i < n; i++)
     {
-        int count = 0;
+        int count = 1;
 
         int found = 0;
 
@@ -49,12 +49,14 @@ int main()
             }
         }
 
-        if (count)
+        if (count > 1)
         {
             printf("%d : duplicate %d times", arr[i], count);
             printf("\n");
         }
     }
+
+    
 
     return 0;
 }
