@@ -46,15 +46,15 @@ int main()
         rightEnd--;
     }
 
-    int leftStart = 0, rightEn = n - 1;
-    while (leftStart < rightEnd)
+    int Start = 0, End = n - 1;
+    while (Start < End)
     {
 
-        int temp = arr[leftStart];
-        arr[leftStart] = arr[rightEnd];
-        arr[rightEnd] = temp;
-        leftStart++;
-        rightEnd--;
+        int temp = arr[Start];
+        arr[Start] = arr[End];
+        arr[End] = temp;
+        Start++;
+        End--;
     }
 
     for (i = 0; i < n; i++)
