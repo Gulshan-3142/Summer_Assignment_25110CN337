@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("Enter size of array: ");
+    scanf("%d", &n);
+
+    if (n <= 0)
+    {
+        printf("Array is empty: ");
+        return 0;
+    }
+
+    int arr[n], i;
+    printf("Enter value: ");
+    for (i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    int k;
+    printf("Enter no of rotation: ");
+    scanf("%d", &k);
+    k = k % n;
+
+    int start = n - k;
+    int end = n - 1;
+    while (start < end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+
+    start = 0;
+    end = n - k - 1;
+    while (start < end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+
+    start = 0;
+    end = n - 1;
+    while (start < end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+
+    return 0;
+}
