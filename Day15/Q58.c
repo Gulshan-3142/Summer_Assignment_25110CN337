@@ -12,49 +12,52 @@ int main()
         return 0;
     }
 
-    int arr[n], i, j;
+    int arr[n], i;
     printf("Enter value: ");
     for (i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
     }
 
-    int rotate;
+    int k;
     printf("Enter number of rotation: ");
-    scanf("%d", &rotate);
+    scanf("%d", &k);
 
-    int k = rotate % n;
-    int secondStart = k;
-    int leftStart = 0, leftEnd = k - 1, rightStart = 0, rightEnd = n - 1;
-    while (leftStart < leftEnd)
+     k = k % n;
+    int start = 0;
+    int end = k-1;
+    while (start < end)
     {
 
-        int temp = arr[leftStart];
-        arr[leftStart] = arr[leftEnd];
-        arr[leftEnd] = temp;
-        leftStart++;
-        leftEnd--;
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
     }
 
-    while (secondStart < rightEnd)
+    start = k;
+    end = n-1;
+    while (start < end)
     {
 
-        int temp = arr[secondStart];
-        arr[secondStart] = arr[rightEnd];
-        arr[rightEnd] = temp;
-        secondStart++;
-        rightEnd--;
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
     }
 
-    int Start = 0, End = n - 1;
-    while (Start < End)
+    start = 0;
+    end = n - 1;
+    while (start < end)
     {
 
-        int temp = arr[Start];
-        arr[Start] = arr[End];
-        arr[End] = temp;
-        Start++;
-        End--;
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
     }
 
     for (i = 0; i < n; i++)
