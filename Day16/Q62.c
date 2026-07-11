@@ -3,7 +3,7 @@
 void frequency(int arr[], int n)
 {
     int i, j, count;
-    int visited[n];
+    int visited[n]; 
 
     // Initialize visited array with 0
     for (i = 0; i < n; i++)
