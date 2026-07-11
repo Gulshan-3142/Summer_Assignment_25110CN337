@@ -2,8 +2,8 @@
 
 void frequency(int arr[], int n)
 {
-    int i, j, count;
-    int visited[n]; 
+    int i, j, count, maxFrequency = 1, maxElement = arr[0];
+    int visited[n];
 
     // Initialize visited array with 0
     for (i = 0; i < n; i++)
@@ -29,8 +29,14 @@ void frequency(int arr[], int n)
             }
         }
 
-        printf("%d : %d times\n", arr[i], count);
+        if (count > maxFrequency)
+        {
+            maxFrequency = count;
+            maxElement = arr[i];
+        }
     }
+    printf("Element with maximum frequency: %d", maxElement);
+    printf("\nFrequency: %d", maxFrequency);
 }
 
 int main()
@@ -40,8 +46,13 @@ int main()
     printf("Enter size of array: ");
     scanf("%d", &n);
 
-    int arr[n];
+    if (n <= 0)
+    {
+        printf("Array is empty.");
+        return 0;
+    }
 
+    int arr[n];
     printf("Enter elements: ");
     for (i = 0; i < n; i++)
     {
