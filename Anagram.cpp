@@ -31,7 +31,7 @@ bool coutfreq(string s, string t)
 
 int main()
 {
-    string str1 = "aab";
+    string str1 = "abb";
     string str2 = "abb";
     if (coutfreq(str1, str2))
     {
